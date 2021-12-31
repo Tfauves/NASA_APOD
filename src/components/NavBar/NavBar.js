@@ -2,7 +2,7 @@
 import React from 'react';
 // import NavButton from './NavButton';
 // import {AuthContext} from '../Providers/AuthProvider'
-
+import NavButton from './NavBarButton';
 const NavBar = (props) => {
 //   const [auth] = useContext(AuthContext)
 
