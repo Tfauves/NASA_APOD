@@ -1,8 +1,8 @@
 
-import BorderCard from "./components/common/BorderCard";
+ import BorderCard from "./components/common/BorderCard";
 // import NavBar from "./components/Navbar/NavBar";
-import Header from "./components/Header";
-
+// import Header from "./components/Header";
+import Apods from "./components/apod/Apods";
 
 
 function App() {
@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="App">
       {/* <NavBar></NavBar> */}
-      <Header />
-   
-  
+      
+      <BorderCard>
+      <Apods />
+      </BorderCard>
+    
     </div>
   );
 }

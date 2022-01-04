@@ -4,7 +4,7 @@ import Apod from './Apod';
 
 const Apods = () => {
 
-  const [apods, setApod] = useState([]);
+  const [apods, setApods] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Apods = () => {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
         setLoading(false);
-        setApod(res.data);
+        setApods(res.data);
       } catch (err) {
         console.error(err.message);
       }
@@ -22,8 +22,7 @@ const Apods = () => {
   },[])
 
   const displayApod = () => {
-    // [{article1}, {article2}, {article3}]
-    // [<Article1 />, <Article2 /> <Article3 />]
+    
     return apods.map((apod, i) => (
       <Apod apod={apod} key={apod.url} />
     ))
