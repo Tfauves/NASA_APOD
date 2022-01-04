@@ -1,20 +1,13 @@
-
- import BorderCard from "./components/common/BorderCard";
-// import NavBar from "./components/Navbar/NavBar";
-// import Header from "./components/Header";
-import Apods from "./components/apod/Apods";
+import Header from "./components/Header";
+import Articles from "./components/APODS";
 
 
 function App() {
 
   return (
     <div className="App">
-      {/* <NavBar></NavBar> */}
-      
-      <BorderCard>
-      <Apods />
-      </BorderCard>
-    
+<Header />
+<Articles />
     </div>
   );
 }

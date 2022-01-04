@@ -1,41 +1,41 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Apod from './Apod';
+import Article from './APOD';
 
-const Apods = () => {
 
-  const [apods, setApods] = useState([]);
+const Articles = () => {
+
+  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const _getApod = async () => {
+    const _getNews = async () => {
       try {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
         setLoading(false);
-        setApods(res.data);
+        setArticles(res.data);
       } catch (err) {
         console.error(err.message);
       }
     }
-    _getApod();
+    _getNews();
   },[])
 
-  const displayApod = () => {
-    
-    return apods.map((apod, i) => (
-      <Apod apod={apod} key={apod.url} />
-    ))
+  const displayArticles = () => {
+    // [{article1}, {article2}, {article3}]
+    // [<Article1 />, <Article2 /> <Article3 />]
+  return articles
   }
 
   return (
     <div style={{width: "100%", justifyContent: 'center'}}>
       {loading ? (
         <p>Loading...</p>
-      ) : displayApod()
+      ) : displayArticles()
       }
     </div>
   )
 }
 
-export default Apods;
+export default Articles;

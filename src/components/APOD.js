@@ -1,9 +1,9 @@
 import React from 'react'
-import BorderCard from '../common/BorderCard'
+import BorderCard from './BorderCard'
 
-const Apod = (props) => {
- 
-  const {urlToImage, title, description, source} = props.apod
+const Article = (props) => {
+  //requires a props.article
+  const {date, explanation, title,  urlToImage,} = props.article
 
   return (
     <BorderCard style={{minWidth: '1000px'}}>
@@ -17,16 +17,16 @@ const Apod = (props) => {
         <div style={{flex: 3, flexDirection: 'column', padding: '0 8px'}}>
 
           <h2>{title}</h2>
-          <p>{description}</p>
-          {source ?  (
-            <small>{source.name}</small> 
+          <p>{explanation}</p>
+          {date ?  (
+            <small>{date}</small> 
           ) : (
             null
           )}
         </div>
       </div>
-     </BorderCard>
+    </BorderCard>
   )
 }
 
-export default Apod;
+export default Article;
