@@ -9,7 +9,7 @@ const Articles = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const _getNews = async () => {
+    const _getApod = async () => {
       try {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
@@ -19,11 +19,13 @@ const Articles = () => {
         console.error(err.message);
       }
     }
-    _getNews();
+    _getApod();
   },[])
 
   const displayArticles = () => {
-   return 
+    return <img src={articles.url} alt={articles.title} />
+   
+
   }
 
   return (
