@@ -1,24 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import BorderCard from './BorderCard'
-import axios from 'axios';
-
 
 const Article = (props) => {
-
+  //requires a props.article
   const {date, explanation, title,  urlToImage,} = props.article
-  
-  useEffect(() => {
-    const _getNews = async () => {
-      try {
-        const res = await axios.get("http://localhost:8080/api/apod");
-        console.log(res.data);
-       
-      } catch (err) {
-        console.error(err.message);
-      }
-    }
-    _getNews();
-  },[])
+
   return (
     <BorderCard style={{minWidth: '1000px'}}>
       <div style={{display: 'flex', flexDirection: 'row'}}>
