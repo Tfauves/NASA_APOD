@@ -5,7 +5,7 @@ import Article from './APOD';
 
 const Articles = () => {
 
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,9 +23,8 @@ const Articles = () => {
   },[])
 
   const displayArticles = () => {
-    // [{article1}, {article2}, {article3}]
-    // [<Article1 />, <Article2 /> <Article3 />]
-  return articles
+    
+    
   }
 
   return (
