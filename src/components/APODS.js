@@ -4,12 +4,12 @@ import Article from './APOD';
 
 
 const Articles = () => {
-
-  const [articles, setArticles] = useState([]);
+  
+  const [articles, setArticles] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const _getNews = async () => {
+    const _getApod = async () => {
       try {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
@@ -19,13 +19,13 @@ const Articles = () => {
         console.error(err.message);
       }
     }
-    _getNews();
+    _getApod();
   },[])
 
   const displayArticles = () => {
-    // [{article1}, {article2}, {article3}]
-    // [<Article1 />, <Article2 /> <Article3 />]
-  return articles
+    return <img src={articles.url} alt={articles.title} />
+   
+
   }
 
   return (
