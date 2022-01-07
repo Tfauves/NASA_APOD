@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-
+import Apod from './APOD';
 
 const Apods = () => {
   
@@ -24,7 +24,9 @@ const Apods = () => {
 
   const displayApod = () => {
     return <img src={apods.url} alt={apods.title} />
-    
+
+    // return apods.get(apod => <Apod apod={apod} key={apod.date}/>)
+   
    
 
   }

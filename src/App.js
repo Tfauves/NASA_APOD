@@ -1,14 +1,13 @@
 
-import Header from "./components/Header";
 import Apods from "./components/APODS";
-
+import NavBar from "./components/Navbar/NavBar";
 
 
 function App() {
 
   return (
     <div className="App">
-      <Header />
+    <NavBar />
       <Apods />
     </div>
   );
