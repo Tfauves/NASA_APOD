@@ -1,20 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Article from './APOD';
 
 
-const Articles = () => {
+const Apods = () => {
   
-  const [articles, setArticles] = useState({});
+  const [apods, setApods] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const _getApod = async () => {
+      // const apiHost = process.env.REACT_APP_API_HOST || "http://localhost:8080"
       try {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
         setLoading(false);
-        setArticles(res.data);
+        setApods(res.data);
       } catch (err) {
         console.error(err.message);
       }
@@ -22,8 +22,9 @@ const Articles = () => {
     _getApod();
   },[])
 
-  const displayArticles = () => {
-    return <img src={articles.url} alt={articles.title} />
+  const displayApod = () => {
+    return <img src={apods.url} alt={apods.title} />
+    
    
 
   }
@@ -32,10 +33,10 @@ const Articles = () => {
     <div style={{width: "100%", justifyContent: 'center'}}>
       {loading ? (
         <p>Loading...</p>
-      ) : displayArticles()
+      ) : displayApod()
       }
     </div>
   )
 }
 
-export default Articles;
+export default Apods;

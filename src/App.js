@@ -1,6 +1,6 @@
 
 import Header from "./components/Header";
-import Articles from "./components/APODS";
+import Apods from "./components/APODS";
 
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Articles />
+      <Apods />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import BorderCard from './BorderCard'
 
-const Article = (props) => {
+const Apod = (props) => {
   //requires a props.article
-  const {date, explanation, title,  urlToImage,} = props.article
+  const {date, explanation, title,  urlToImage,} = props.apod
 
   return (
     <BorderCard style={{minWidth: '1000px'}}>
@@ -29,4 +29,4 @@ const Article = (props) => {
   )
 }
 
-export default Article;
+export default Apod;
