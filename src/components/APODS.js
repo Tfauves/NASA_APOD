@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Apod from './APOD';
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons';
 
 const Apods = () => {
   
