@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Apod from './APOD';
-import { faAlignCenter } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 const Apods = () => {
   
@@ -24,12 +26,18 @@ const Apods = () => {
   },[])
 
   const displayApod = () => {
-    return <img src={apods.url} alt={apods.title} />
+    return (
+    <div >
+      <h2 style={{marginTop: 100, color: '#cfd4e2'}}>{apods.title}</h2>
+      <p style={{color: '#cfd4e2'}}>{apods.date}</p>
+      <img style={{height: '100%', width: '100%', objectFit: 'cover'}}src={apods.url} alt={apods.title} />
+      <p style={{color: '#cfd4e2'}}>{apods.explanation}</p>
 
+    </div>
     // return apods.get(apod => <Apod apod={apod} key={apod.date}/>)
-   
-   
-
+     
+    )
+  
   }
 
   return (

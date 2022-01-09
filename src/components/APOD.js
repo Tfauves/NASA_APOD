@@ -12,7 +12,7 @@ const Apod = (props) => {
           <img 
             src={urlToImage} 
             style={{height: '100%', width: '100%', objectFit: 'cover'}} 
-            alt="article img"/>
+            alt="apod img"/>
         </div>
         <div style={{flex: 3, flexDirection: 'column', padding: '0 8px'}}>
 
