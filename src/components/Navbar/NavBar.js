@@ -1,10 +1,6 @@
 import React, { Fragment} from 'react';
-// import NavButton from './NavButton';
-// import {AuthContext} from '../Providers/AuthProvider'
 
 const NavBar = (props) => {
-//   const [auth] = useContext(AuthContext)
-
   return (
     <nav style={{
       display:'flex',

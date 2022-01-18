@@ -1,8 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Apod from './APOD';
-
-
 
 
 const Apods = () => {
@@ -12,7 +9,6 @@ const Apods = () => {
 
   useEffect(() => {
     const _getApod = async () => {
-      // const apiHost = process.env.REACT_APP_API_HOST || "http://localhost:8080"
       try {
         const res = await axios.get("http://localhost:8080/api/apod");
         console.log(res.data);
@@ -35,7 +31,6 @@ const Apods = () => {
       <p style={{color: '#cfd4e2'}}>{apods.explanation}</p>
 
     </div>
-    // return apods.get(apod => <Apod apod={apod} key={apod.date}/>)
      
     )
   

@@ -1,7 +1,6 @@
 
 import Apods from "./components/APODS";
 import NavBar from "./components/Navbar/NavBar";
-import BorderCard from "./components/BorderCard";
 
 function App() {
 
